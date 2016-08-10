@@ -7,16 +7,14 @@ class RegulationCacheBuilder extends AbstractCacheBuilder
 {
     protected function rebuild(array $parameters)
     {
-        $data = [
-            'regulations' => []
-        ];
+        $data = [];
 
-        $sql = sprintf("SELECT * FROM wcf%s_%s ORDER BY displayOrder", WCF_N, Regulation::getDatabaseTableName());
+        $sql = sprintf("SELECT * FROM %s ORDER BY sortOrder", Regulation::getDatabaseTableName());
         $statement = WCF::getDB()->prepareStatement($sql);
         $statement->execute();
 
-        while ($object = $statement->fetchObject('wcf\data\regulation\Regulation')) {
-            $data['regulations'][$object->identifier][$object->regulationID] = $object;
+        while ($object = $statement->fetchObject(Regulation::class)) {
+            $data[$object->identifier] = $object;
         }
 
         return $data;

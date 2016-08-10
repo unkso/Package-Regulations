@@ -4,12 +4,12 @@
         <packagename>=US= Regulations</packagename>
         <packagedescription>Regulation management and BBCode</packagedescription>
         <version>0.1.0</version>
-        <date>2016-02-02</date>
+        <date>2016-08-10</date>
     </packageinformation>
     
     <authorinformation>
         <author>Christopher Mühl</author>
-        <authorurl>www.padarom.de</authorurl>
+        <authorurl>www.padarom.io</authorurl>
     </authorinformation>
     
     <requiredpackages>
@@ -19,9 +19,15 @@
     
     <instructions type="install">
         <instruction type="file">files.tar</instruction>
-        <instruction type="sql">install.sql</instruction>
-        <instruction type="bbcode">bbcode.xml</instruction>
-        <instruction type="pageMenu">pageMenu.xml</instruction>
         <instruction type="template">templates.tar</instruction>
+        <instruction type="sql">sql/install/010-regulation.sql</instruction>
+
+        <instruction type="language">language/*.xml</instruction>
+
+        <instruction type="bbcode">xml/bbcode.xml</instruction>
+        <instruction type="pageMenu">xml/pageMenu.xml</instruction>
+        <instruction type="objectType">xml/objectType.xml</instruction>
+        <instruction type="acpMenu">xml/acpMenu.xml</instruction>
+        <instruction type="userGroupOption">xml/userGroupOption.xml</instruction>
     </instructions>
 </package>

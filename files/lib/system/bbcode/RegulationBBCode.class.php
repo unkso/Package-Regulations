@@ -1,5 +1,6 @@
 <?php namespace wcf\system\bbcode;
 
+use wcf\data\regulation\Regulation;
 use wcf\util\StringUtil;
 
 class RegulationBBCode extends AbstractBBCode 
@@ -8,24 +9,23 @@ class RegulationBBCode extends AbstractBBCode
 	public function getParsedTag(array $openingTag, $content, array $closingTag, BBCodeParser $parser) 
 	{
 		$content = StringUtil::trim($content);
-		
-		$regulationText  = 'Regulation Test';
-		$regulationTitle = '=US= Regulation '. $content;
-		$regulationLink  = '#';
+
+        $regulation = Regulation::getByIdentifier($content);
+        $link = '';
 
 		// Regulation with name $content
 		// Get permalink
 		
 		$html = <<<UNKNOWNSOLDIERS
-<blockquote class="quoteBox container containerPadding quoteBoxSimple" cite="$regulationLink">
+<blockquote class="quoteBox container containerPadding quoteBoxSimple" cite="$link">
     <header>
         <h3>
-            <a href="$regulationLink" target="_blank">$regulationTitle</a>
+            <a href="$link" target="_blank">{$regulation->name}</a>
         </h3>
     </header>
     
     <div>
-        $regulationText
+        {$regulation->description}
     </div>
 </blockquote>
 UNKNOWNSOLDIERS;
