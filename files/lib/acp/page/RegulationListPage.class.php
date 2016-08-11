@@ -6,7 +6,7 @@ use wcf\page\SortablePage;
 
 class RegulationListPage extends SortablePage
 {
-    public $activeMenuItem = 'wcf.acp.menu.link.clan.settings.regulation.add';
+    public $activeMenuItem = 'wcf.acp.menu.link.clan.settings.regulation.list';
 
 	public $defaultSortField = 'regulationID';
 

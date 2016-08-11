@@ -9,7 +9,7 @@ use wcf\system\WCF;
 
 class RegulationAddForm extends FormBuilder
 {
-    public $activeMenuItem = 'wcf.acp.menu.link.clan.settings.regulation.add';
+    public $activeMenuItem = 'wcf.acp.menu.link.clan.settings.regulation.list';
 
     public $neededPermissions = ['admin.clan.regulation.canManageRegulations'];
 

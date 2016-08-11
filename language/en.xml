@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="de">
+<language xmlns="http://www.woltlab.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.woltlab.com http://www.woltlab.com/XSD/maelstrom/language.xsd" languagecode="en" languagename="English" countrycode="gb">
     <category name="wcf.page">
-        <item name="wcf.page.training.regulations"><![CDATA[Regulations]]></item>
+        <item name="wcf.page.training.regulations">Regulations</item>
     </category>
 
-	<category name="wcf.acp">
-	</category>
+    <category name="wcf.acp.menu">
+        <item name="wcf.acp.menu.link.clan.settings.regulation.list">List Regulations</item>
+        <item name="wcf.acp.menu.link.clan.settings.regulation.category.list">List Regulation Categories</item>
+    </category>
+
+    <category name="wcf.acp.regulation">
+        <item name="wcf.acp.regulation.action.list">Regulations</item>
+        <item name="wcf.acp.regulation.action.add">Add Regulation</item>
+        <item name="wcf.acp.regulation.action.name">Display Name</item>
+        <item name="wcf.acp.regulation.action.identifier">Internal Identifier</item>
+        <item name="wcf.acp.regulation.action.identifier.description"><![CDATA[This is a unique identifier used to create anchors and the <code>[REGULATION]</code> BBCode.]]></item>
+        <item name="wcf.acp.regulation.action.category">Regulation Category</item>
+        <item name="wcf.acp.regulation.action.sortOrder">Display Order</item>
+        <item name="wcf.acp.regulation.action.description">Text</item>
+        <item name="wcf.acp.regulation.action.description.description"><![CDATA[HTML is enabled by default.]]></item>
+        <item name="wcf.acp.regulation.action.isDisabled">Disable regulation</item>
+
+        <item name="wcf.acp.regulation.action.general">General</item>
+    </category>
 </language>

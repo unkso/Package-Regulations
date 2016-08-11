@@ -9,13 +9,6 @@
 			<showorder>1</showorder>
 		</acpmenuitem>
 
-		<acpmenuitem name="wcf.acp.menu.link.clan.settings.regulation.add">
-			<controller><![CDATA[wcf\acp\form\RegulationAddForm]]></controller>
-			<parent>wcf.acp.menu.link.clan.settings</parent>
-			<permissions>admin.clan.regulation.canManageRegulations</permissions>
-			<showorder>2</showorder>
-		</acpmenuitem>
-
 		<acpmenuitem name="wcf.acp.menu.link.clan.settings.regulation.category.list">
 			<controller><![CDATA[wcf\acp\page\RegulationCategoryListPage]]></controller>
 			<parent>wcf.acp.menu.link.clan.settings</parent>

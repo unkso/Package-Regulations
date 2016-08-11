@@ -21,7 +21,7 @@
 <div class="contentNavigation">
 	<nav>
 		<ul>
-			<li><a href="{link controller='RegulationList'}{/link}" class="button"><span class="icon icon16 icon-list"></span> <span>{lang}wcf.acp.menu.link.clan.regulation.list{/lang}</span></a></li>
+			<li><a href="{link controller='RegulationList'}{/link}" class="button"><span class="icon icon16 icon-list"></span> <span>{lang}wcf.acp.menu.link.clan.settings.regulation.list{/lang}</span></a></li>
 
 			{event name='contentNavigationButtons'}
 		</ul>
@@ -47,6 +47,7 @@
 				<dt><label for="regulationIdentifier">{lang}wcf.acp.regulation.action.identifier{/lang}</label></dt>
 				<dd>
 					<input id="regulationIdentifier" name="identifier" value="{$object->identifier|or:''}" type="text" class="medium" />
+					<small>{lang}wcf.acp.regulation.action.identifier.description{/lang}</small>
 					{if $errorField == 'identifier'}
 						<small class="innerError">
 							{lang}wcf.global.form.error.{$errorType}{/lang}
@@ -74,6 +75,7 @@
 				<dt><label for="regulationDescription">{lang}wcf.acp.regulation.action.description{/lang}</label></dt>
 				<dd>
 					<textarea id="regulationDescription" name="description" cols="40" rows="5">{$object->description|or:''}</textarea>
+					<small>{lang}wcf.acp.regulation.action.description.description{/lang}</small>
 					{if $errorField == 'description'}
 						<small class="innerError">
 							{lang}wcf.global.form.error.{$errorType}{/lang}
@@ -82,9 +84,9 @@
 				</dd>
 			</dl>
 			<dl>
-				<dt><label for="sortOrder">{lang}wcf.acp.regulation.action.relevance{/lang}</label></dt>
+				<dt><label for="sortOrder">{lang}wcf.acp.regulation.action.sortOrder{/lang}</label></dt>
 				<dd>
-					<input type="number" id="sortOrder" name="sortOrder" value="{$object->sortOrder|or:1}" class="tiny" min="0" />
+					<input type="number" id="sortOrder" name="sortOrder" value="{$object->sortOrder|or:'0'}" class="tiny" min="0" />
 					{if $errorField == 'sortOrder'}
 						<small class="innerError">
 							{lang}wcf.global.form.error.{$errorType}{/lang}

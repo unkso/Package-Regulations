@@ -3,7 +3,7 @@
 use wcf\data\regulation\RegulationCache;
 use wcf\system\WCF;
 
-class RegulationListPage extends AbstractPage
+class RegulationListPage extends TrainingCenterPage
 {
     public $activeMenuItem = 'wcf.page.training.regulations';
 
