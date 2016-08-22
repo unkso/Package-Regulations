@@ -2,6 +2,7 @@
 
 use wcf\data\regulation\Regulation;
 use wcf\util\StringUtil;
+use wcf\system\request\LinkHandler;
 
 class RegulationBBCode extends AbstractBBCode 
 {
@@ -11,13 +12,13 @@ class RegulationBBCode extends AbstractBBCode
 		$content = StringUtil::trim($content);
 
         $regulation = Regulation::getByIdentifier($content);
-        $link = '';
+        $link = LinkHandler::getInstance()->getLink('RegulationList', []);
 
 		// Regulation with name $content
 		// Get permalink
 		
 		$html = <<<UNKNOWNSOLDIERS
-<blockquote class="quoteBox container containerPadding quoteBoxSimple" cite="$link">
+<blockquote class="quoteBox quoteBoxSimple blockquote" cite="$link">
     <header>
         <h3>
             <a href="$link" target="_blank">{$regulation->name}</a>

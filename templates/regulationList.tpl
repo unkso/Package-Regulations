@@ -34,7 +34,7 @@
                         {if $category['regs']|count}
                             {foreach from=$category['regs'] item=regulation}
                                 {counter assign=regNo name=regNo|concat:$key print=false}
-                                <h4 {if $regNo > 1}class="marginTop"{/if}>{$regulation->name}</h4>
+                                <h4 class="big {if $regNo > 1}marginTop{/if}">{$regulation->name}</h4>
                                 <blockquote><p>{@$regulation->description}</p></blockquote>
                             {/foreach}
                         {else}
