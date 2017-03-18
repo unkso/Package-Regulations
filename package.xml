@@ -3,7 +3,7 @@
     <packageinformation>
         <packagename>=US= Regulations</packagename>
         <packagedescription>Regulation management and BBCode</packagedescription>
-        <version>0.1.0</version>
+        <version>0.1.2</version>
         <date>2016-08-10</date>
     </packageinformation>
     
@@ -14,12 +14,13 @@
     
     <requiredpackages>
         <requiredpackage minversion="2.0.7">com.woltlab.wcf</requiredpackage>
-        <requiredpackage minversion="4.0.0">com.woltlab.wbb</requiredpackage>
+        <requiredpackage minversion="1.3.0">com.clanunknownsoldiers.plugin.base</requiredpackage>
     </requiredpackages>
-    
+
     <instructions type="install">
         <instruction type="file">files.tar</instruction>
         <instruction type="template">templates.tar</instruction>
+        <instruction type="acpTemplate">acptemplates.tar</instruction>
         <instruction type="sql">sql/install/010-regulation.sql</instruction>
 
         <instruction type="language">language/*.xml</instruction>
@@ -29,5 +30,10 @@
         <instruction type="objectType">xml/objectType.xml</instruction>
         <instruction type="acpMenu">xml/acpMenu.xml</instruction>
         <instruction type="userGroupOption">xml/userGroupOption.xml</instruction>
+    </instructions>
+
+    <instructions type="update" fromversion="0.1.0">
+        <instruction type="file">files.tar</instruction>
+        <instruction type="pageMenu">xml/pageMenu.xml</instruction>
     </instructions>
 </package>

@@ -6,7 +6,7 @@
     <script data-relocate="true">
         //<![CDATA[
         $(function() {
-            new WCF.Action.Delete('wcf\\data\\regulation\\action\\RegulationAction', '.jsAwardActionRow .jsDeleteButton');
+            new WCF.Action.Delete('wcf\\data\\regulation\\RegulationAction', '.jsRegulationRow');
         });
         //]]>
     </script>
@@ -46,7 +46,7 @@
 
             <tbody>
             {foreach from=$objects item=regulation}
-                <tr class="jsAwardActionRow">
+                <tr class="jsRegulationRow">
                     <td class="columnIcon">
                         <a href="{link controller='RegulationEdit' id=$regulation->regulationID}{/link}" title="{lang}wcf.global.button.edit{/lang}" class="jsTooltip"><span class="icon icon16 icon-pencil"></span></a>
                         <span class="icon icon16 icon-remove jsDeleteButton jsTooltip pointer" title="{lang}wcf.global.button.delete{/lang}" data-object-id="{@$regulation->regulationID}" data-confirm-message="{lang}wcf.acp.clan.regulation.delete.sure{/lang}"></span>

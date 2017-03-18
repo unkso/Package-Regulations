@@ -7,9 +7,9 @@ class RegulationAction extends AbstractDatabaseObjectAction implements IToggleAc
 {
     protected $className = RegulationEditor::class;
 
-    protected $permissionsDelete = ['admin.clan.regulations.canMangeRegulations'];
+    protected $permissionsDelete = ['admin.clan.regulation.canManageRegulations'];
 
-    protected $permissionsUpdate = ['admin.clan.regulations.canManageRegulations'];
+    protected $permissionsUpdate = ['admin.clan.regulation.canManageRegulations'];
 
     protected $requireACP = ['delete', 'toggle', 'update', 'create'];
 

@@ -7,6 +7,8 @@ class RegulationListPage extends TrainingCenterPage
 {
     public $activeMenuItem = 'wcf.page.training.regulations';
 
+    public $neededPermissions = ['user.clan.canAccessInternalPages'];
+
     public $templateName = 'regulationList';
 
     public function assignVariables() {
